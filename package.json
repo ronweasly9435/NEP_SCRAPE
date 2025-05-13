@@ -1,0 +1,25 @@
+{
+  "name": "amazon-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "install": "^0.13.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "npm": "^11.3.0",
+    "path": "^0.12.7",
+    "puppeteer": "^24.7.2",
+    "puppeteer-cluster": "^0.24.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "user-agents": "^1.1.529"
+  }
+}
