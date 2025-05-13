@@ -4,7 +4,7 @@ const path = require('path');
 const { Parser } = require('json2csv');
 const hardcodedUrls = require("./URLs");
 
-// Configuration constants
+
 const CONFIG = {
   MAX_RETRIES: 2,
   BASE_DELAY: 1500,
@@ -14,7 +14,7 @@ const CONFIG = {
   USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36'
 };
 
-// Enhanced ASIN extraction patterns
+//Regex patterns
 const ASIN_PATTERNS = [
   /(?:dp|gp\/product|product)\/([A-Z0-9]{10})(?:[/?]|$)/i,
   /(?:ASIN)=([A-Z0-9]{10})(?:&|$)/i
@@ -82,7 +82,7 @@ async function scrapeAmazonProduct(url, retryCount = 0) {
       page.waitForSelector('#nav-bb-logo', { timeout: 5000 })
     ]).catch(() => console.log('No critical elements found, proceeding anyway'));
 
-    // Scroll to trigger lazy loading
+    // lazy loading
     await autoScroll(page);
 
     // Extract data with robust selectors
